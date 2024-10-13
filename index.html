@@ -11,7 +11,7 @@
 <body>
 
     <header id="navbar">
-        <!-- Navigation pour grands écrans -->
+
         <nav class="desktop-nav">
             <ul>
                 <li><a href="#accueil">ACCUEIL</a></li>
@@ -23,7 +23,6 @@
             </ul>
         </nav>
     
-       <!-- Barre de navigation mobile -->
         <div class="mobile-header">
             <div class="mobile-logo">
                 <img src="Images/logo.png" alt="Logo">
@@ -35,7 +34,6 @@
             </div>
         </div>
 
-        <!-- Menu mobile (caché par défaut) -->
         <nav class="mobile-nav">
             <ul>
                 <li><a href="#accueil">ACCUEIL</a></li>
@@ -144,36 +142,44 @@
         <h2>Portfolio</h2>
         <div class="carousel-container">
             <div class="carousel">
-                <!-- Slide 1 -->
                 <div class="carousel-slide">
-                    <a href="https://github.com/EliosKng/Projet-5-Kasa" target="_blank">
-                        <img src="Images/Kasa.png" alt="Projet 1">
-                    </a>
-                </div>
-                <!-- Slide 2 -->
-                <div class="carousel-slide">
-                    <a href="https://github.com/EliosKng/Projet-6-Mon-Vieux-Grimoire" target="_blank">
-                        <img src="Images/Grimoire.png" alt="Projet 2">
-                    </a>
-                </div>
-                <!-- Slide 3 -->
-                <div class="carousel-slide">
-                    <a href="https://github.com/EliosKng/Nina-Carducci-Dev-master" target="_blank">
-                        <img src="Images/Photo.png" alt="Projet 3">
-                    </a>
+                    <img src="Images/Kasa.png" alt="Projet Kasa" class="clickable-img" 
+                        data-title="Projet Kasa" 
+                        data-description="Application web permettant de rechercher et de réserver des logements entre particuliers. Kasa propose des logements variés avec une présentation claire, des avis et un système de notation pour les utilisateurs.<br><br>
+                                        Compétences utilisées : React, JavaScript, CSS, Responsive Design." 
+                        data-github="https://github.com/EliosKng/Projet-5-Kasa">
                 </div>
                 <div class="carousel-slide">
-                    <a href="https://github.com/EliosKng/OC-Projet-2-Booki" target="_blank">
-                        <img src="Images/Booki.png" alt="Projet 4">
-                    </a>
+                    <img src="Images/Grimoire.png" alt="Projet Mon Vieux Grimoire" class="clickable-img" 
+                        data-title="Mon Vieux Grimoire" 
+                        data-description="Une application pour les passionnés de lecture qui permet de partager des avis sur des livres, d’ajouter des ouvrages à une bibliothèque personnelle et de découvrir de nouveaux livres recommandés par la communauté.<br><br>
+                                        Compétences utilisées : Node.js, Express, MongoDB, JavaScript, HTML/CSS." 
+                        data-github="https://github.com/EliosKng/Projet-6-Mon-Vieux-Grimoire">
+                </div>
+                <div class="carousel-slide">
+                    <img src="Images/Photo.png" alt="Projet Nina Carducci Portfolio" class="clickable-img" 
+                        data-title="Nina Carducci Portfolio" 
+                        data-description="Ce projet consistait en l'optimisation d'un site existant pour une photographe professionnelle. Nous avons amélioré les performances et le SEO du site avec une optimisation des images et du code.<br><br>
+                                        <strong>Avant optimisation :</strong><br><img src='Images/Avantopti.png' alt='Avant optimisation'><br><br>
+                                        <strong>Après optimisation :</strong><br><img src='Images/Aprèsopti.png' alt='Après optimisation'><br><br>
+                                        Compétences utilisées : Optimisation des performances, SEO, compression d'images, amélioration du code HTML/CSS." 
+                        data-github="https://github.com/EliosKng/Nina-Carducci-Dev-master">
+                </div>
+                <div class="carousel-slide">
+                    <img src="Images/Booki.png" alt="Projet Booki" class="clickable-img" 
+                        data-title="Booki" 
+                        data-description="Plateforme de réservation d’hébergements et d’activités pour des vacances. Le projet met l'accent sur une interface fluide et un design responsive pour faciliter la recherche et la réservation en ligne.<br><br>
+                                        Compétences utilisées : HTML, CSS, JavaScript, Responsive Design." 
+                        data-github="https://github.com/EliosKng/OC-Projet-2-Booki">
                 </div>
             </div>
-    
-            <!-- Boutons de contrôle -->
+
             <a class="carousel-control prev" onclick="prevSlide()">&#10094;</a>
             <a class="carousel-control next" onclick="nextSlide()">&#10095;</a>
         </div>
     </section>
+    
+    
     
 
     <section id="contact">
@@ -203,8 +209,15 @@
         </div>
         <p>© 2024 Elias Bouzit. Tous droits réservés.</p>
     </footer>
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+        <a id="modalGithubLink" href="#" target="_blank" class="btn">Voir sur GitHub</a>
+    </div>
+</div>
 
     <script src="script.js"></script>
-
 </body>
 </html>

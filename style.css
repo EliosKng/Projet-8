@@ -322,8 +322,6 @@ h2 {
     text-align: center;
 }
     
-
-
 .role {
     font-size: 1.5em;
     font-weight: bold;
@@ -489,8 +487,7 @@ header.scrolled nav ul li a {
     position: relative;
     z-index: 10;
 }
-/* Styles pour la section Portfolio */
-/* Styles pour la section Portfolio */
+
 #portfolio {
     text-align: center;
 }
@@ -522,10 +519,10 @@ header.scrolled nav ul li a {
     height: 600px;
     object-fit: contain;
     border-radius: 10px;
-    width: 100%;
+    cursor: pointer;
+    max-width: 100%;
 }
 
-/* Contrôles du carrousel */
 .carousel-control {
     position: absolute;
     top: 50%;
@@ -535,7 +532,7 @@ header.scrolled nav ul li a {
     color: rgba(0, 0, 0, 0.507);
     cursor: pointer;
     transition: background-color 0.3s ease;
-    z-index: 2; /* S'assurer que les flèches sont au-dessus de l'image */
+    z-index: 2;
 }
 
 .carousel-control.prev {
@@ -550,7 +547,6 @@ header.scrolled nav ul li a {
     background-color: rgba(97, 97, 97, 0.685);
 }
 
-/* Responsiveness */
 @media (max-width: 1024px) {
     .carousel-container {
         max-width: 70%;
@@ -587,6 +583,17 @@ header.scrolled nav ul li a {
     }
 }
 
+@media (max-width: 420px) {
+    .progress i {
+        font-size: 1.2em;
+    }
+    .progress .skill-name {
+        font-size: 0.6em;
+    }
+    p {
+        font-size: 0.8em;
+    }
+}
 
 footer {
     background-color: #333;
@@ -611,13 +618,12 @@ footer .social-icons a {
     transition: background-color 0.3s ease;
 }
 
-
 footer p {
     color: #fff; 
     font-size: 12px; 
     margin-bottom: 0px;
 }
-/* Style général */
+
 header {
     display: flex;
     justify-content: center;
@@ -635,7 +641,6 @@ header {
     height: 40px;
 }
 
-/* Barre de navigation pour ordinateurs */
 .desktop-nav ul {
     list-style: none;
     display: flex;
@@ -649,8 +654,6 @@ header {
     font-weight: bold;
 }
 
-
-/* Menu hamburger mobile */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -665,9 +668,6 @@ header {
     transition: 0.3s;
 }
 
-
-
-/* Navigation actuelle pour desktop */
 .desktop-nav {
     display: flex;
     justify-content: center;
@@ -686,7 +686,6 @@ header {
     font-weight: bold;
 }
 
-/* Styles pour mobile */
 .mobile-header {
     display: none;
     justify-content: space-between;
@@ -718,7 +717,6 @@ header {
     transition: 0.3s;
 }
 
-/* Menu mobile caché par défaut */
 .mobile-nav {
     display: none;
     flex-direction: column;
@@ -735,7 +733,7 @@ header {
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column; /* Mise en colonne */
+    flex-direction: column; 
 }
 
 .mobile-nav ul li {
@@ -757,7 +755,6 @@ header {
     background-color: #0003c0;
 }
 
-/* Afficher uniquement la barre de navigation mobile sur petits écrans */
 @media (max-width: 768px) {
     .desktop-nav {
         display: none;
@@ -772,3 +769,70 @@ header {
     }
 }
 
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.modal-content h2 {
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.modal-content .btn {
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content .btn:hover {
+    background-color: #c5c5c5;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ffffff;
+}
+
+.modal-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
